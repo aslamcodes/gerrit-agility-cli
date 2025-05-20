@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"git-cli/pkg"
+	"gcommit/pkg"
 	"strings"
 )
 
@@ -10,6 +10,7 @@ func Execute(push bool) error {
 	var ticket string
 	var message string
 
+	// Add
 	if err := git.AddChanges(); err != nil {
 		return err
 	}
@@ -26,6 +27,11 @@ func Execute(push bool) error {
 		return fmt.Errorf("invalid ticket, should be starting with B-")
 	}
 
+	if message == "" {
+		return fmt.Errorf("invalide messaage")
+	}
+
+	// Commit
 	fmt.Println("Enter commit message")
 	fmt.Scan(&message)
 
@@ -33,6 +39,7 @@ func Execute(push bool) error {
 		return err
 	}
 
+	// Pushing
 	if !push {
 		fmt.Print("Changes committed")
 		return nil
