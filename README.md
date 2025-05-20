@@ -29,9 +29,9 @@ A simple command-line interface (CLI) tool for managing Git commits and pushes w
     ```
 
 3. Install 
-```bash
-go install ./...
-```
+    ```bash
+    go install ./...
+    ```
 
 ## Usage
 
