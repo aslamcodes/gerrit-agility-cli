@@ -38,4 +38,4 @@ A simple command-line interface (CLI) tool for managing Git commits and pushes w
 Run the CLI tool with the following command:
 
 ```bash
-git-cli-tool [-p]
+gcommit [-p]
